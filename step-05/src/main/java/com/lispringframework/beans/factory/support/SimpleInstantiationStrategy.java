@@ -1,13 +1,13 @@
-package com.li.springframework.beans.factory.support;
+package com.lispringframework.beans.factory.support;
 
-import cn.bugstack.springframework.beans.BeansException;
-import cn.bugstack.springframework.beans.factory.config.BeanDefinition;
+import com.lispringframework.beans.BeansException;
+import com.lispringframework.beans.factory.config.BeanDefinition;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 /**
- * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
+ * 作者：Lee
  */
 public class SimpleInstantiationStrategy implements InstantiationStrategy {
 

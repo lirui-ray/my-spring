@@ -1,7 +1,7 @@
-package com.li.springframework.beans.factory.support;
+package com.lispringframework.beans.factory.support;
 
-import cn.bugstack.springframework.beans.BeansException;
-import cn.bugstack.springframework.beans.factory.config.BeanDefinition;
+import com.lispringframework.beans.BeansException;
+import com.lispringframework.beans.factory.config.BeanDefinition;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.NoOp;
 

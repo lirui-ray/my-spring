@@ -1,7 +1,7 @@
-package com.li.springframework.beans;
+package com.lispringframework.beans;
 
 /**
- * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
+ * 作者：Lee
  */
 public class BeansException extends RuntimeException {
 

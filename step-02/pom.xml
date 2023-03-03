@@ -7,7 +7,7 @@
     <artifactId>step-02</artifactId>
     <parent>
         <groupId>com.li.springframework</groupId>
-        <artifactId>MySpring</artifactId>
+        <artifactId>My-Spring</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 

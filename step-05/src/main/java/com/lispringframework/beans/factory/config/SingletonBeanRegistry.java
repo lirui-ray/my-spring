@@ -1,7 +1,7 @@
-package com.li.springframework.beans.factory.config;
+package com.lispringframework.beans.factory.config;
 
 /**
- * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
+ * 作者：Lee
  *
  * 单例注册表
  */
@@ -10,3 +10,4 @@ public interface SingletonBeanRegistry {
     Object getSingleton(String beanName);
 
 }
+                                                

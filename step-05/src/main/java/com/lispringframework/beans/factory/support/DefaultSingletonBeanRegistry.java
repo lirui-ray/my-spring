@@ -1,12 +1,12 @@
-package com.li.springframework.beans.factory.support;
+package com.lispringframework.beans.factory.support;
 
-import cn.bugstack.springframework.beans.factory.config.SingletonBeanRegistry;
+import com.lispringframework.beans.factory.config.SingletonBeanRegistry;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
+ * 作者：Lee
  */
 public class DefaultSingletonBeanRegistry implements SingletonBeanRegistry {
 

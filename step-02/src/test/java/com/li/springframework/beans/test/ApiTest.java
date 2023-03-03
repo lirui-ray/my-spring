@@ -6,7 +6,7 @@ import com.li.springframework.beans.test.bean.UserService;
 import org.junit.jupiter.api.Test;
 
 /**
- * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
+ * 作者：Lee
  */
 public class ApiTest {
 

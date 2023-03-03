@@ -1,11 +1,11 @@
-package com.li.springframework.beans.factory.support;
+package com.lispringframework.beans.factory.support;
 
-import cn.bugstack.springframework.beans.BeansException;
-import cn.bugstack.springframework.beans.factory.BeanFactory;
-import cn.bugstack.springframework.beans.factory.config.BeanDefinition;
+import com.lispringframework.beans.BeansException;
+import com.lispringframework.beans.factory.BeanFactory;
+import com.lispringframework.beans.factory.config.BeanDefinition;
 
 /**
- * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
+ * 作者：Lee
  * <p>
  * BeanDefinition注册表接口
  */
@@ -19,6 +19,11 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
     @Override
     public Object getBean(String name, Object... args) throws BeansException {
         return doGetBean(name, args);
+    }
+
+    @Override
+    public <T> T getBean(String name, Class<T> requiredType) throws BeansException {
+        return (T) getBean(name);
     }
 
     protected <T> T doGetBean(final String name, final Object[] args) {
