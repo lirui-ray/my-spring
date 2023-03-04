@@ -1,13 +1,13 @@
 package com.li.springframework.test;
 
-import com.lispringframework.beans.PropertyValue;
-import com.lispringframework.beans.PropertyValues;
-import com.lispringframework.beans.factory.config.BeanDefinition;
-import com.lispringframework.beans.factory.config.BeanReference;
-import com.lispringframework.beans.factory.support.DefaultListableBeanFactory;
-import com.lispringframework.beans.factory.xml.XmlBeanDefinitionReader;
-import com.lispringframework.core.io.DefaultResourceLoader;
-import com.lispringframework.core.io.Resource;
+import com.li.springframework.beans.PropertyValue;
+import com.li.springframework.beans.PropertyValues;
+import com.li.springframework.beans.factory.config.BeanDefinition;
+import com.li.springframework.beans.factory.config.BeanReference;
+import com.li.springframework.beans.factory.support.DefaultListableBeanFactory;
+import com.li.springframework.beans.factory.xml.XmlBeanDefinitionReader;
+import com.li.springframework.core.io.DefaultResourceLoader;
+import com.li.springframework.core.io.Resource;
 import com.li.springframework.test.bean.UserDao;
 import com.li.springframework.test.bean.UserService;
 import cn.hutool.core.io.IoUtil;
