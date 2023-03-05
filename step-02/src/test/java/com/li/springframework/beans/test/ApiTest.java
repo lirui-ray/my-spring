@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 
 /**
  * 作者：Lee
+ * 实现Bean的定义注册和获取
  */
 public class ApiTest {
 
