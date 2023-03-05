@@ -22,7 +22,8 @@ public abstract class AbstractRefreshableApplicationContext extends AbstractAppl
     protected abstract void loadBeanDefinitions(DefaultListableBeanFactory beanFactory);
 
     @Override
-    public ConfigurableListableBeanFactory getBeanFactory() {
+    protected ConfigurableListableBeanFactory getBeanFactory() {
         return beanFactory;
     }
+
 }
