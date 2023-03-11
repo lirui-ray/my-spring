@@ -1,7 +1,7 @@
 package com.li.springframework.test.bean;
 
 /**
- * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
+ * 作者：Lee
  */
 public class UserService {
 

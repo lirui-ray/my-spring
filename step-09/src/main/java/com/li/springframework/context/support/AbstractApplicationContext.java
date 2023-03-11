@@ -4,6 +4,7 @@ import com.li.springframework.beans.BeansException;
 import com.li.springframework.beans.factory.ConfigurableListableBeanFactory;
 import com.li.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import com.li.springframework.beans.factory.config.BeanPostProcessor;
+import com.li.springframework.beans.factory.support.ApplicationContextAwareProcessor;
 import com.li.springframework.context.ConfigurableApplicationContext;
 import com.li.springframework.core.io.DefaultResourceLoader;
 
@@ -19,16 +20,18 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader i
         // 2.获取BeanFactory
         ConfigurableListableBeanFactory beanFactory = getBeanFactory();
 
-        // 3.在Bean实例化前执行Bean工厂的后置处理器（在这个过程中往BeanDefinition中添加了增强的内容，
+        // 3. 添加 ApplicationContextAwareProcessor，让继承自 ApplicationContextAware 的 Bean 对象都能感知所属的 ApplicationContext
+        beanFactory.addBeanPostProcessor(new ApplicationContextAwareProcessor(this));
+
+        // 4.在Bean实例化前执行Bean工厂的后置处理器（在这个过程中往BeanDefinition中添加了增强的内容，
         // 在创建bean后（com.li.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory#applyPropertyValues）强制掉了原propertyValue，使用了后添加的propertyValue）
         invokeBeanFactoryPostProcessors(beanFactory);
 
-        // 4.BeanPostProcessor需要提前于其他Bean对象实例化之前执行注册操作
+        // 5.BeanPostProcessor需要提前于其他Bean对象实例化之前执行注册操作
         registerBeanPostProcessors(beanFactory);
 
-        // 5.提前实例化单例Bean对象 （在这个过程中执行了Bean的增强）
+        // 6.提前实例化单例Bean对象 （在这个过程中执行了Bean的增强）
         beanFactory.preInstantiateSingletons();
-
     }
 
     protected abstract void refreshBeanFactory() throws BeansException;
